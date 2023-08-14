@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nang Bui Chef</title>
+    <meta name="description" content="A brief description">
+    <meta name="author" content="your Site Name">
+
+    <!-- Open Graph Protocol -->
+    <!--
+    <meta property="og:title" content="A brief description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mysite">
+    <meta property="og:description" content="A brief description">
+    <meta property="og:image" content="image.png">
+    -->
+
+    <!-- Icon -->
+    <link rel="icon" href="Logo.png">
+
+    <!-- Include your CSS files here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src = "Logo.png">
+        <h1 id = "Greeting">READY FOR YOUR FIRST 10/10 MEAL, LET'S BOOK A TABLE RIGHT AWAY</h1>
+    </header>
+    <nav>
+        <!-- Add your website navigation here -->
+        <div>
+            <a href = "index.html">Home</a>
+            <a href = "location.html">Location</a>
+            <a href = "blog.html">Blog</a>
+        </div>
+    </nav>
+    <main>
+        <!-- Add your main content here -->
+        <h1>Book a table</h1>
+
+        <!-- This is radio button method-->
+        <!-- <form method = "POST">
+            <fieldset id = "size">
+                <label><input type = "radio" value = "2" name = "size"> 2-person table</label>
+                <label><input type = "radio" value = "4" name = "size"> 4-person table</label>
+                <label><input type = "radio" value = "6" name = "size"> 6-person table</label>
+            </fieldset>
+            <fieldset id = "location">
+                <input type = "radio" value = "indoors" name = "location"> Indoors
+                <input type = "radio" value = "outdoors" name = "location"> Outdoors
+            </fieldset>
+            <button type = "submit">BOOK</button>
+        </form>-->
+
+        <!--This is advanced interactive method-->
+        <form>
+            <div>
+                <label for "booking_date">Booking date</label>
+                <input type = "date" id = "booking_date" name = "booking_date">
+            </div>
+            <div>
+                <label for "booking_people">Number of people</label>
+                <input type = "range" id = "booking_people" name = "booking_people" min = "1" max = "10" value = "4" oninput="this.nextElementSibling.value = this.value">
+                <output>4</output>
+            </div>
+            <div>
+                <label for "booking_location">Restaurant location</label>
+                <input id = "booking_location" name = "booking_location" list = "locations">
+                <datalist id = "locations">
+                    <option value = "Downtown Saigon, Vietnam"></option>
+                    <option value = "Downtown Fort Smith, Arkansas USA"></option>
+                </datalist>
+            </div>
+            <div>
+                <fieldset id = "room">
+                    <input type = "radio" value = "indoors" name = "room"> Indoors
+                    <input type = "radio" value = "outdoors" name = "room"> Outdoors
+                </fieldset>
+            </div>
+            <button type = "submit">BOOK</button>
+        </form>
+    </main>
+    <footer>
+        <!-- Add copyright notices and other footer content here -->
+        <p>Copyright Nang Bui Chef</p>
+    </footer>
+
+    <!-- Include your JavaScript files here -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
